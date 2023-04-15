@@ -1,0 +1,18 @@
+{
+  "name": "to_do_list",
+  "version": "1.0.0",
+  "description": "to do list app to keep track of your task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "utkarsh",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.3",
+    "node-sass-middleware": "^1.0.1"
+  }
+}

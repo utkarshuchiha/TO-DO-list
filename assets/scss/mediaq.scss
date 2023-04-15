@@ -1,0 +1,150 @@
+// Extra Small Devices (portrait phones)
+@media only screen and (max-width: 576px) {
+    .todo-app {
+      padding: 20px;
+    }
+  
+    .row {
+      height: auto;
+      margin-bottom: 10px;
+  
+      #description {
+        width: 100%;
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  
+    #row-second {
+      flex-direction: column;
+      height: auto;
+  
+      #category-container {
+        width: 100%;
+        margin-bottom: 10px;
+  
+        #category {
+          font-size: 14px;
+          height: auto;
+        }
+      }
+  
+      #date-container {
+        width: 100%;
+  
+        #date {
+          font-size: 14px;
+          height: auto;
+        }
+      }
+    }
+  
+    #btn {
+      #submit-btn {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  // Small Devices (landscape phones)
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    .row {
+      #description {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 8px;
+      }
+    }
+  
+    #row-second {
+      #category-container {
+        #category {
+          font-size: 16px;
+        }
+      }
+  
+      #date-container {
+        #date {
+          font-size: 16px;
+        }
+      }
+    }
+  
+    #btn {
+      #submit-btn {
+        font-size: 18px;
+      }
+    }
+  }
+  
+  // Medium Devices (tablets)
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .todo-app {
+      padding: 30px;
+    }
+  
+    .row {
+      #description {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 10px;
+      }
+    }
+  
+    #row-second {
+      #category-container {
+        #category {
+          font-size: 18px;
+        }
+      }
+  
+      #date-container {
+        #date {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    #btn {
+      #submit-btn {
+        font-size: 20px;
+      }
+    }
+  }
+  
+  // Large Devices (desktops)
+  @media only screen and (min-width: 992px) {
+    .todo-app {
+      padding: 40px 30px 70px;
+    }
+  
+    .row {
+      #description {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 15px;
+      }
+    }
+  
+    #row-second {
+      #category-container {
+        #category {
+          font-size: 20px;
+        }
+      }
+  
+      #date-container {
+        #date {
+          font-size: 20px;
+        }
+      }
+    }
+  
+    #btn {
+      #submit-btn {
+        font-size: 22px;
+      }
+    }
+  }
+  

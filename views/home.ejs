@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%=title%>
+  </title>
+  <!-- fontawesome script -->
+  <script src="https://kit.fontawesome.com/df5e4c5952.js" crossorigin="anonymous"></script>
+  <!-- css file -->
+  <link rel="stylesheet" href="/css/home.css" />
+  <!-- media queries -->
+  <link rel="stylesheet" href="/css/mediaq.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="todo-app">
+      <h2>
+        TO-DO List <span id="icon-main"><i class="fa-solid fa-clipboard-list"></i></span>
+      </h2>
+      <div class="row">
+        <form action="/task/add" method="post">
+          <input type="text" name="description" placeholder="Add task" id="description" required />
+      </div>
+      <br />
+
+      <div id="row-second">
+        <div id="category-container">
+          <label for="category">Category:</label>
+          <select name="category" id="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+            <option value="personal">Personal</option>
+            <option value="recreation">Recreation</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+        <div id="date-container">
+          <label for="date"> Due Date:</label>
+          <input type="date" name="date" id="date" date-format="dd/mm/yyyy" min="<%= (new Date().toISOString().split('T')[0])%>" required />
+        </div>
+      </div>
+      <div id="btn">
+        <input type="submit" value="ADD TASK" id="submit-btn" />
+      </div>
+      </form>
+      <div id="list">
+        <%for(let t of tasks){%>
+        <ul class="list-container">
+          <li>
+            <a href="/task/update/<%= t._id %>?status=<%= !t.status %>">
+              <%if(t.status==true){%>
+              <i class="fa-regular fa-circle-check"></i>
+              <%}else{%>
+              <i class="fa-regular fa-circle"></i>
+              <%}%>
+            </a>
+              <%if(t.status==true){%>
+              <div id="list-1" class="checked">
+                <p>
+                  <%=t.description%>
+                </p>
+                <small> <i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;<%= t.date.toLocaleDateString('en-GB',
+                      { day: '2-digit' , month: '2-digit' , year: 'numeric' }) %></small>
+              </div>
+              <%}else{%>
+              <div id="list-1">
+                <p>
+                  <%=t.description%>
+                </p>
+                <small> <i class="fa-regular fa-calendar-days"></i>&nbsp;&nbsp;<%=
+                        t.date.toLocaleDateString('en-GB', { day: '2-digit' , month: '2-digit' , year: 'numeric' }) %>
+                </small>
+              </div>
+              <%}%>
+                    <div id="label">
+                      <p class="category">
+                        <%=t.category%>
+              </p>
+      </div>
+      <a href="/task/delete/<%=t._id%>"> <i class="fa-regular fa-trash-can"></i></a>
+      </li>
+      </ul>
+      <%}%>
+      </div>
+      <div class="footer">
+        <p>
+          <i class="fa-solid fa-check-double"></i>
+          Active task :
+          <%=count%>
+      </p>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

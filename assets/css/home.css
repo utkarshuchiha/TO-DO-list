@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #c5adc5, #b2b5e0);
+  padding: 10px; }
+  .container .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; }
+    .container .todo-app h2 {
+      color: #002765;
+      text-align: center;
+      margin-bottom: 20px; }
+      .container .todo-app h2 #icon-main {
+        margin-left: 10px; }
+    .container .todo-app .row {
+      display: flex;
+      align-items: center;
+      background: #edeef0;
+      border-radius: 30px;
+      height: 40px;
+      padding-left: 15px; }
+      .container .todo-app .row #description {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 400px; }
+    .container .todo-app #row-second {
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px; }
+      .container .todo-app #row-second #category-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .container .todo-app #row-second #category-container #category {
+          height: 40px;
+          width: 100%;
+          border-radius: 15px;
+          border: none;
+          outline: none;
+          text-align: center; }
+      .container .todo-app #row-second #date-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 5px; }
+        .container .todo-app #row-second #date-container #date {
+          height: 40px;
+          width: 100%;
+          border-radius: 15px;
+          background: #edeef0;
+          border: none;
+          outline: none;
+          text-align: center; }
+    .container .todo-app #btn {
+      padding: 10px;
+      display: flex;
+      justify-content: center; }
+      .container .todo-app #btn #submit-btn {
+        padding: 11px 36px;
+        background: #ff5945;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: none;
+        outline: none; }
+    .container .todo-app #list {
+      display: flex;
+      flex-direction: column; }
+      .container .todo-app #list.checked {
+        text-decoration: line-through; }
+      .container .todo-app #list .list-container {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+        list-style: none;
+        font-size: 17px;
+        background-color: #fff566;
+        border-radius: 40px;
+        margin-bottom: 10px; }
+        .container .todo-app #list .list-container .task-status {
+          height: 22px;
+          width: 36px; }
+        .container .todo-app #list .list-container #list-1 {
+          width: 200px;
+          margin-left: -69px;
+          overflow-wrap: break-word; }
+          .container .todo-app #list .list-container #list-1.checked {
+            text-decoration: line-through; }
+        .container .todo-app #list .list-container #label {
+          display: flex;
+          width: 100px;
+          align-items: center;
+          justify-content: center;
+          height: 36px;
+          background-color: #8458fd; }
+        .container .todo-app #list .list-container li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 20px; }
+          .container .todo-app #list .list-container li p {
+            margin: 0;
+            font-size: 18px; }
+            .container .todo-app #list .list-container li p:first-of-type {
+              font-size: 24px; }
+            .container .todo-app #list .list-container li p.category {
+              font-size: 16px; }
+    .container .todo-app a {
+      color: black; }
+    .container .todo-app:visited {
+      color: black; }
+    .container .todo-app .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center; }

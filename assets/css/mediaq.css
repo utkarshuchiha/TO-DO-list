@@ -1,0 +1,67 @@
+@media only screen and (max-width: 576px) {
+  .todo-app {
+    padding: 20px; }
+  .row {
+    height: auto;
+    margin-bottom: 10px; }
+    .row #description {
+      width: 100%;
+      font-size: 14px;
+      padding: 5px;
+      border-radius: 5px; }
+  #row-second {
+    flex-direction: column;
+    height: auto; }
+    #row-second #category-container {
+      width: 100%;
+      margin-bottom: 10px; }
+      #row-second #category-container #category {
+        font-size: 14px;
+        height: auto; }
+    #row-second #date-container {
+      width: 100%; }
+      #row-second #date-container #date {
+        font-size: 14px;
+        height: auto; }
+  #btn #submit-btn {
+    font-size: 16px; } }
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .row #description {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px; }
+  #row-second #category-container #category {
+    font-size: 16px; }
+  #row-second #date-container #date {
+    font-size: 16px; }
+  #btn #submit-btn {
+    font-size: 18px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .todo-app {
+    padding: 30px; }
+  .row #description {
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 10px; }
+  #row-second #category-container #category {
+    font-size: 18px; }
+  #row-second #date-container #date {
+    font-size: 18px; }
+  #btn #submit-btn {
+    font-size: 20px; } }
+
+@media only screen and (min-width: 992px) {
+  .todo-app {
+    padding: 40px 30px 70px; }
+  .row #description {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px; }
+  #row-second #category-container #category {
+    font-size: 20px; }
+  #row-second #date-container #date {
+    font-size: 20px; }
+  #btn #submit-btn {
+    font-size: 22px; } }
